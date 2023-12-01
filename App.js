@@ -5,6 +5,8 @@ import Nav from './components/Nav';
 export default function App() {
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>Adopt-A-Buddy</Text>
+      <Text style={styles.subtitle}>Find your best friend today</Text>
       <Nav />
       <ScrollView contentContainerStyle={styles.scrollViewContainer}>
         <Text>Testing!!!</Text>
@@ -22,6 +24,19 @@ const styles = StyleSheet.create({
   scrollViewContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 50, // Adjust based on the height of your Nav component
   },
+  title: {
+    backgroundColor: '#ccd5ae',
+    width: '100%',
+    fontSize: 20,
+    fontWeight: 'bold',
+    paddingLeft: 15,
+    paddingTop: 50
+  },
+  subtitle: {
+    backgroundColor: '#ccd5ae',
+    width: '100%',
+    fontSize: 15,
+    paddingLeft: 15,
+  }
 });

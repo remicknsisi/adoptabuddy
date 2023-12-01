@@ -1,13 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function Nav() {
     return (
         <View style={styles.nav}>
-            <Text style={styles.title}>Adopt-A-Buddy</Text>
             <View style={styles.buttonsContainer}>
-                <Text style={styles.button}>Click me!</Text>
-                <Text style={styles.button}>Click me!</Text>
-                <Text style={styles.button}>Click me!</Text>
+                <TouchableOpacity style={styles.button}>
+                    <Text>Click me!</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button}>
+                    <Text>Click me!</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button}>
+                    <Text>Click me!</Text>
+                </TouchableOpacity>
             </View>
         </View>
     );
@@ -16,21 +21,18 @@ export default function Nav() {
 const styles = StyleSheet.create({
     nav: {
         backgroundColor: '#ccd5ae',
-        alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
-        height: '15%',
-    },
-    title: {
-        fontSize: 20,
-        fontWeight: 'bold',
+        height: '10%',
     },
     buttonsContainer: {
         flexDirection: 'row',
+        justifyContent: 'space-between',
+        padding: 15
     },
     button: {
         padding: 10,
-        borderRadius: '10',
+        borderRadius: 50,
         backgroundColor: '#faedcd'
     }
 });
