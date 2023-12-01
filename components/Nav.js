@@ -1,27 +1,20 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function Nav({ navigation, route }) {
+    const state = navigation?.dangerouslyGetState();
+
     return (
         <View style={styles.nav}>
             <View style={styles.buttonsContainer}>
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('Home')}
-                    style={styles.button}
-                >
-                    <Text>Listings</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('Home')}
-                    style={styles.button}
-                >
-                    <Text>Adoption About</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('Home')}
-                    style={styles.button}
-                >
-                    <Text>Log In</Text>
-                </TouchableOpacity>
+                {state?.routes.map((screen, index) => (
+                    <TouchableOpacity
+                        key={index}
+                        onPress={() => navigation.navigate(screen.name)}
+                        style={styles.button}
+                    >
+                        <Text>{screen.name}</Text>
+                    </TouchableOpacity>
+                ))}
             </View>
         </View>
     );

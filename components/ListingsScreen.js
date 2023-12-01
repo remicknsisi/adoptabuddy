@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, Button } from 'react-native';
 
-const DetailsScreen = ({ navigation }) => {
+const ListingsScreen = ({ navigation }) => {
     return (
         <View>
-            <Text>Details Screen</Text>
+            <Text>Listings Screen</Text>
             <Button
                 title="Go back to Home"
                 onPress={() => navigation.navigate('Home')}
@@ -13,4 +13,4 @@ const DetailsScreen = ({ navigation }) => {
     );
 };
 
-export default DetailsScreen;
+export default ListingsScreen;
