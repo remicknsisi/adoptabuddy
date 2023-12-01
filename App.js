@@ -1,17 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, ScrollView, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import Nav from './components/Nav';
+import AppNavigator from './AppNavigtor';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Adopt-A-Buddy</Text>
       <Text style={styles.subtitle}>Find your best friend today</Text>
-      <Nav />
-      <ScrollView contentContainerStyle={styles.scrollViewContainer}>
-        <Text>Testing!!!</Text>
-        <StatusBar style="auto" />
-      </ScrollView>
+      {/* <Nav /> */}
+      <NavigationContainer>
+        <AppNavigator />
+      </NavigationContainer>
     </View>
   );
 }
