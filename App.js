@@ -1,14 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native';
-import Nav from './components/Nav';
 import AppNavigator from './AppNavigtor';
 import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Adopt-A-Buddy</Text>
-      <Text style={styles.subtitle}>Find your best friend today</Text>
-      {/* <Nav /> */}
+      <Text style={styles.title}>Adopt-A-Buddy :-)</Text>
+      <Text style={styles.subtitle}>Find your best friend today!</Text>
       <NavigationContainer>
         <AppNavigator />
       </NavigationContainer>
@@ -37,6 +35,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#ccd5ae',
     width: '100%',
     fontSize: 15,
-    paddingLeft: 15,
+    padding: 15,
   }
 });
